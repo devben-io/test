@@ -1,0 +1,257 @@
+
+/* cascade of what and waht not to display */
+body > * { display:none; }
+body > #background { display:block; } 
+body > #background > * { display:none; } 
+body > #background > #centered { display:block; width:auto; padding:0;} 
+body > #background > #centered > * { display:none; } 
+body > #background > #centered > #pages { display:block; } 
+body > #background > #centered > #pages > * { display:none; } 
+body > #background > #centered > #pages > div.page,
+body > #background > #centered > #pages > div.insert { display:block; } 
+body > #background > #centered > #pages > div.page > * { display:none; }
+body > #background > #centered > #pages > div.page > span.body { display:block; padding-top:0px; min-height:auto !important; }
+body > #background > #centered > #pages > div.page > span.body > * { display:none;}
+/* fallback for different site structure in Kultur/ Buch */
+body > #background > #centered > #pages > div.page > span.body > .rack { display:block;}
+body > #background > #centered > #pages > div.page > span.body > .rack > * { display:none;}
+
+body > #background > #centered > #pages > div.page > span.body    div.sect { display:block; padding:0px;} 
+body > #background > #centered > #pages > div.page > span.body >  div.sect > * { display:none; } 
+body > #background > #centered > #pages > div.page > span.body >  div.sect > .sectbody { display:block; box-shadow: none; padding:0;} 
+
+/* fallback for different site structure in Kultur/ Buch */
+body > #background > #centered > #pages > div.page > span.body > .rack >  div.sect > * { display:none; } 
+body > #background > #centered > #pages > div.page > span.body > .rack >  div.sect > .sectbody { display:block; box-shadow: none; padding:0;} 
+
+body > #background > #centered > #pages > div.page > span.body  div.sect > .sectbody::before { display:none;} 
+body > #background > #centered > #pages > div.page > span.body  div.sect > .directory { display:block; box-shadow: none; padding:0;} 
+
+/* don't print comments */
+body > #background > #centered > #pages > div.page.community { display:none; }
+
+/* don't tear articles in lists apart */
+body > #background > #centered > #pages > div.page > span.body  div.sect > .directory > li { page-break-inside: avoid; }
+
+
+/* rules for longread */
+body.js #pages > .news.article.page > .body > .main > .longread, 
+#pages > .longread > .body, #pages > .full.page.longread > .body,
+.body > .main > .longread > article.sectbody > .secthead > p.intro {
+	width: 100% !important;	
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.body >.main >.longread .headlineWrapper {
+	/* no text on image */
+	height: auto;
+	bottom: 0;
+}
+.body > .main > .longread > article.sectbody > .secthead > a.full.picture:first-of-type::after {
+	/* no gradient on image */
+	content: none;
+}
+.body > .main > .longread .sectbody > h6, .sect_article.longread ~ .sect_text.tziBottom h6, .body > .main > .longread > article.sectbody .sect:not(.sect_text) > .secthead > h2 {
+	width: 60% !important;
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+}
+.body >.main >.longread .sect_galleries,
+#pages.news >.longread > .body >*
+ {
+	display: none !important;
+} 
+#pages.news >.longread > .body >.main {
+	display: block !important;
+
+}
+
+.body > .main > .longread > article.sectbody > .secthead > a.full.picture:first-of-type + p.caption {
+	top: 338px !important;
+}
+/* end rules for longread */
+
+body > #background > #centered > #pages > div.longread.article.page > span.body > div.main.rack > div.sect_article.longread > article {
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	transform-origin: top;
+}
+	
+
+
+/* reset dimensions of the main content */
+.body .sect_article > .sectbody > p.article, 
+.body .sect_article > .sectbody > h6 {
+	width:auto !important;
+	height:auto;
+	padding-left:15px; 
+	padding-right:15px;
+	margin-left: 0px !important; 
+	margin-bottom:10px;
+	float:none;
+	position:static;
+	widows:3;
+	orphans:3;
+/*	page-break-inside: avoid; */
+}
+
+/* Intro nicht in die rechte Spalte schieben */
+.sect > .sectbody > p.intro {
+	width: auto;
+	height:auto;
+}
+
+/* Links in articles  */
+.sect > .sectbody > p.article > a:after {
+	content: " [https://taz.de/!" attr(href)"]";
+	color:#d50d2e;
+	font-size:75%;
+	word-wrap: break-word;
+}
+
+.sect > .sectbody > p.article > a[href^='//']:after {
+	content: " [ https:" attr(href) "]";
+}
+
+.sect > .sectbody > p.article > a[href^='http://']:after,
+.sect > .sectbody > p.article > a[href^='https://']:after {
+	content: " [" attr(href) "]";
+}
+/* don't pull pictures, racks and captions apart */
+.body .sect_article > .sectbody > a.picture,
+.body .sect_article > .sectbody > .rack,
+.body .sect_article > .sectbody > .caption {
+	margin-right: 24px;
+	page-break-inside: avoid;
+}
+
+/* don't pull picture and their caption apart */
+.sect_article > .sectbody > a.picture + .caption {
+	page-break-before: avoid;
+}
+
+body > #background > #centered > #pages > div.page > div.float  { 
+	display:block; 
+	position:static !important; 
+	height:auto !important; 
+	width:auto !important; 
+	margin-top:15px;
+}
+ 
+body > #background > #centered > #pages > div.page > div.float::before { 
+	display:none; 
+}
+
+body > #background > #centered > #pages > div.page > div.float > div.rightbar {
+	display:block; 
+	position:static !important;
+	height:auto !important;
+	width:auto; 
+} 
+
+
+body > #background > #centered > #pages > div.page div.nose,
+body > #background > #centered > #pages > div.page span.wing {
+	display:none;
+}
+	
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] {
+	display:block; 
+	padding-top:0px; 
+	width:auto;
+} 
+
+/* Artikel Meta Daten  nie trennen */
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack {
+	page-break-inside:avoid;
+	border-width:0;
+}
+
+/* aber "aktuelle ausgabe der taz" ausblenden  */
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > * {
+	display:none !important; 
+}
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > .sect_meta, 
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > .sect_profile,
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > .sect_profile-descr,
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > .sect_tags {
+	display:block !important;
+}
+
+/* PDF und Interred Links wenn vorhanden ausblenden */
+body > #background > #centered > #pages > div.page span.wing[role='contentinfo'] > .rack > .print-length > .sectbody > ul.right.toolbar {
+	visibility:hidden;
+}
+
+/* forms? where we go we need no forms */
+form, form[style] {
+	display:none !important;
+}
+/* no tzi */
+#tzi-shackle, #tzi-shackle[style] {
+	display:none !important;
+}
+/* no ads */
+iframe, iframe[style] {
+	display:none !important;
+}
+
+/* don't scale images beyond page */
+img {
+	max-width: 100%;
+}
+/* Hintergrund wird nicht gedruckt, also zussätzlich unterstreichung */
+mark {
+	border-bottom:1px solid #ee4;
+}
+
+/* 
+  Versuch: Links im directory 
+  Es fehlen aber einige spezialfälle
+ */
+ul.directory li a.objlink {
+	padding-bottom:15px !important;
+}
+ul.directory li a.pictured {
+	min-height:auto !important;
+}
+ul.directory li a.objlink.leaded p {
+	padding-bottom:0px;
+}
+
+ul.directory li ul.teaserstuff {
+	margin-top:15px;
+}
+
+ul.directory li a.objlink::after {
+	/*content: "http://taz.de" attr(href); */
+	content: "http://taz.de/!" attr(ratiourl-ressource);
+	color:#d50d2e;
+	background-color:#fff;
+	word-wrap: break-word;
+	clear:both;
+	height:auto;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	font-size:75%;
+	border-width:0;
+	width:auto;
+	
+}
+ul.directory li a.objlink[href^='http:']::after,
+ul.directory li a.objlink[href^='https:']::after {
+	content: attr(href);
+}
+
+.sect_article.longread > article.sectbody > .secthead > .headlineWrapper > h4,
+.sect_article.longread > article.sectbody > .secthead > .headlineWrapper > h1 {
+	text-align: center;
+}
+
+
+

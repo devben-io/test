@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 15:46:22+01:00 page_id=5044 :: Specht der Woche--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 5044--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Specht der Woche - taz.de</title><meta name="author" content="taz. die tageszeitung"></meta><meta name="description" content="Kritischer, unabhängiger Journalismus der linken Nachrichtenseite taz: Analysen, Hintergründe, Kommentare, Interviews, Reportagen. Genossenschaft seit 1992."></meta><meta name="keywords" content="Specht der Woche, mit Behinderung, Nachrichten, News, taz, tageszeitung "></meta><meta name="taz:title" data-id="p5044" content="Specht der Woche"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"p5044" // String
+            , page_title_enc      :"p5044: Specht der Woche" // String
+            , custom_url_enc      :"/!p5044" // String
+            , channel             :"web" // String
+            , area                :"Verlag" // String
+            , department          :"p5044" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : false  // Boolean
+            , has_tags            : false  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/mit-behinderung/Specht-der-Woche/!p5044/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Specht der Woche" href="rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/corp2020-10-20_52.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-10-20_52.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"p5044" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/mit-Behinderung/Specht-der-Woche" // String
+            , is_article      : false  // Boolean
+            , is_corp         : true  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js"></script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><ul style="display: none" itemscope="" itemtype="http://schema.org/Webpage"><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li></ul><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Verlag/mit-Behinderung/Specht-der-Woche",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><div id="pages" class="corp"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd selected"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full corp page first last odd first_page n1"><div class="head" role="head"><h1 class="title"><ul class="newsnavigation"><li><a itemprop="url" id="5043" href="/!p5043/">mit Behinderung</a></li></ul></h1><ul role="navigation" class="corp navbar newsnavigation"><li class="first odd trodd home selected"><a href="/!p4608/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="odd treven selected"><a id="menu_p5044"><span>Specht der Woche</span></a></li><li class="last even trodd"><a href="/mit-Behinderung/Spechts-Corona-Tagebuch/!p5291/" id="menu_p5291"><span>Spechts Corona-Tagebuch</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div role="region" id="xid734812" class="first odd sect sect_leads style_leads  first_sect_leads evenpicts "><ul role="directory" debug="x1" class="corp directory"><li class="sectbody first odd trodd first_sectbody online   leaded pictured leaded story"><a href="/Specht-der-Woche-9112020/!171946/" ratioURL-ressource="171946" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 9.11.2020</h4><h3>Die Krankenhäuser sind zu voll</h3><p>Wegen der Coronakrise sind die Berliner Krankenhäuser zu voll und Operationen müssen verschoben werden.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-November-2020-Christian-Specht-Krankenhaeuser-sind-zu-voll-Corona.jpg" alt="" title=""></img></a></li><li class="sectbody last even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-21102020/!171860/" ratioURL-ressource="171860" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 21.10.2020</h4><h3>Rechtsextreme bei der Polizei</h3><p>Bei der Polizei werden immer mehr rechtsextreme Gruppen entdeckt. Christian Specht macht das Angst.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-Oktober-2020-Christian-Specht-Rechtsextreme-bei-der-Polizei.jpg" alt="" title=""></img></a></li></ul></div><div role="region" id="xid446354" class="even sect sect_leads style_leads evenpicts "><ul role="directory" debug="x1" class="corp directory"><li class="sectbody first odd trodd first_sectbody online   leaded pictured leaded story"><a href="/Specht-der-Woche-12102020/!171780/" ratioURL-ressource="171780" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 12.10.2020</h4><h3>Kleine Kinos in Gefahr</h3><p>Christian Specht hat Angst, dass während der Corona-Pandemie die kleinen Kinos pleitegehen könnten.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-12.-Oktober-2020-Christian-Specht-Kleine-Kinos-in-Gefahr-Corona-Pandemie-pleite.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-05102020/!171724/" ratioURL-ressource="171724" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 05.10.2020</h4><h3>Bücherei im Bus</h3><p>Christian Specht gefällt die Idee, beim Busfahren Bücher lesen und ausleihen zu können.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-05.-Oktober-2020-Christian-Specht-Buecherei-im-Bus-Buecher-leihen-lesen-Bibliothek.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-14092020/!171621/" ratioURL-ressource="171621" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 14.09.2020</h4><h3>Auf die Opposition zugehen</h3><p>In Belarus werden Politiker*innen der Opposition verhaftet. Christian Specht solidarisiert sich mit den Protesten.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-14.-September-2020-Christian-Specht-Auf-die-Opposition-zugehen-Belarus-Proteste-Lukaschenko.jpg" alt="" title=""></img></a></li><li class="sectbody last even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-07092020/!171538/" ratioURL-ressource="171538" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 07.09.2020</h4><h3>Die Menschen haben Angst</h3><p>Christian Specht findet es schlimm, dass jüdische Einrichtungen vor Anschlägen geschützt werden müssen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-07.-September-2020-Christian-Specht-Die-Menschen-haben-Angst-Halle-Anschlag-auf-juedische-Gemeinde.jpg" alt="" title=""></img></a></li></ul></div><div role="region" id="xid734811" class="odd sect sect_leads style_leads evenpicts "><ul role="directory" debug="x1" class="corp directory"><li class="sectbody first odd trodd first_sectbody online   leaded pictured leaded story"><a href="/Specht-der-Woche-31082020/!171490/" ratioURL-ressource="171490" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 31.08.2020</h4><h3>Ein Radio für meinen Kiez</h3><p>Christian Specht möchte einen eigenen Radiosender für Kiezberichte aus Neukölln ins Leben rufen.   <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Specht-der-Woche-31.-August-2020-Christian-Specht-Ein-Radio-fuer-meinen-Kiez-Kiezradio-Neukoelln.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-24082020/!171451/" ratioURL-ressource="171451" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 24.08.2020</h4><h3>Quasi drinnen</h3><p>Christian Specht trifft wegen Corona andere Leute hauptsächlich draußen. Aber was, wenn es kalt wird?  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Christian-Specht-Quasi-drinnen-Cafes-Corona-draussen-bei-Kaelte-Heizpilze-Hygienekonzept.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-17082020/!171417/" ratioURL-ressource="171417" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 17.08.2020</h4><h3>Buden mit Abstand</h3><p>Wird es trotz Corona Weihnachtsmärkte geben? Christian Specht findet, mit einem guten Konzept sollte es gehen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/taz-mit-Behinderung-Christian-Specht-Buden-mit_Abstand-Corona-Weihnachtsmaerkte-Hygienekonzept.jpg" alt="" title=""></img></a></li><li class="sectbody last even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-03082020/!171353/" ratioURL-ressource="171353" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 03.08.2020</h4><h3>Feiern ja, Lockdown nein</h3><p>Christian Specht macht sich Sorgen, dass illegale Riesenpartys zu einem zweiten Lockdown führen könnten.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Partys-Corona-zweiter-Lockdown.jpg" alt="" title=""></img></a></li></ul></div><div role="region" id="xid758815" class="last even sect sect_leads style_leads evenpicts "><ul role="directory" debug="x1" class="corp directory"><li class="sectbody first odd trodd first_sectbody online   leaded pictured leaded story"><a href="/Specht-der-Woche-27072020/!171319/" ratioURL-ressource="171319" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 27.07.2020</h4><h3>Ausbeutung der Spargel­arbeiter</h3><p>Christian Specht isst gerne Spargel. Aber die schlechten Arbeitsbedingungen bei der Spargelernte verderben ihm den Appetit.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Spargel__arbeiter.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-21072020/!171292/" ratioURL-ressource="171292" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 21.07.2020</h4><h3>Der Mann aus dem Wald</h3><p>Mit Pfeil und Bogen erpresste ein Mann Pistolen von Polizisten und flüchtete dann in den Schwarzwald bei Oppenau. Gruselige Vorstellung, findet Christian Specht.   <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Specht-der-Woche-Schwarzwald-Oppenau-Mann-Waffe-Polizei-Juli-2020_2-1.png" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-13072020/!171243/" ratioURL-ressource="171243" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 13.07.2020</h4><h3>Zu viele Alte in der Partei</h3><p>Die CDU braucht dringend mehr Frauen und vor allem mehr jüngere Leute, findet Christian Specht.   <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-CDU-Zu-viele-Alte-in-der-Partei.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-06072020/!171204/" ratioURL-ressource="171204" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 06.07.2020</h4><h3>„Ich bin für Quoten“</h3><p>Christian Specht fordert mehr Integration im Bundestag für Menschen mit Behinderung oder Migrationshintergrund.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Quoten-taz-mit_Behinderung.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-30062020/!171207/" ratioURL-ressource="171207" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 30.06.2020</h4><h3>Rumms!</h3><p>Nicht nur kulturelle Einrichtungen, sondern auch Zirkusse und Jahrmärkte sind wegen Corona noch immer geschlossen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Autoscooter-taz-mit-Behinderung.jpg" alt="" title=""></img></a></li><li class="sectbody even treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-22062020/!171122/" ratioURL-ressource="171122" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 22.06.2020</h4><h3>Die Arche versorgt Menschen in Not</h3><p>Gerade jetzt ist die gemeinnützige Arbeit der Arche besonders wichtig und sollte unterstützt werden, findet Christian Specht.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Arche.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-15062020/!171072/" ratioURL-ressource="171072" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 15.06.2020</h4><h3>Freibäder wieder offen</h3><p>Endlich können die Berliner wieder schwimmen gehen – allerdings unter allen möglichen Auflagen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Freibaeder.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-08062020/!171055/" ratioURL-ressource="171055" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 08.06.2020</h4><h3>Ein bisschen Streit kann gut sein</h3><p>Bei den Diskussionen um das Konjunkturprogramm sind sich plötzlich nicht mehr alle einig.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Streit.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-02062020/!171013/" ratioURL-ressource="171013" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 02.06.2020</h4><h3>Halb Schloss, halb Palast</h3><p>Christian Specht hat eine Idee, mit der man den Streit um das Berliner Stadtschloss hätte beilegen können.  </p><img src="/uploads/images/300/Christian-Specht-Stadtschloss.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-27052020/!170961/" ratioURL-ressource="170961" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 27.05.2020</h4><h3>Ruhe bitte</h3><p>Bei schönem Wetter wird wieder Rasen gemäht. Aber Rasenmäher machen einen Riesenkrach!  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Rasenmaeher.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-18052020/!170943/" ratioURL-ressource="170943" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 18.05.2020</h4><h3>Theater und seltsame Demos</h3><p>Christian Specht ruft Theaterleute und andere Kreative zum Protest gegen Rechts auf.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Theater.jpg" alt="" title=""></img></a></li><li class="sectbody even treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-11052020/!170880/" ratioURL-ressource="170880" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 11.05.2020</h4><h3>Draußen im Wald</h3><p> Endlich ist das Wetter schön und man kann raus in die Natur gehen. Das ist gut für die Laune.  </p><img src="/uploads/images/300/Christian-Specht-Fuchs.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-20042020/!170812/" ratioURL-ressource="170812" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 20.04.2020</h4><h3>Musik an der Straßenecke</h3><p>In Marzahn hat der Bezirk die Anwohner mit mobiler Live-Musik unterhalten. Christian findet das toll.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Strassenmusik.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-14042020/!170717/" ratioURL-ressource="170717" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 14.04.2020</h4><h3>Solidarität für wirklich alle</h3><p>Für Menschen, die in Behindertenwerkstätten arbeiten, gibt es keinen Mindestlohn und keine Gewerkschaften.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Behindertenwerkstatt.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-06042020/!170676/" ratioURL-ressource="170676" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 06.04.2020</h4><h3>Die Kirche macht den Menschen Mut</h3><p>Christian geht gerne in die Kirche und findet es schade, dass es an Ostern keine Gottesdienste geben wird.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-KIrche.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-31032020/!170648/" ratioURL-ressource="170648" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 31.03.2020</h4><h3>Ostern am Fenster</h3><p>Christian wünscht sich zu Ostern wieder ein normales Leben. Aber das wird wohl nicht gehen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Ostern.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-23032020/!170582/" ratioURL-ressource="170582" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 23.03.2020</h4><h3>Weg mit den Hamstern!</h3><p>Christian wünscht sich, dass ein großer Fisch kommt und alle Viren frisst. Und alle Hamster.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Hamster.jpg" alt="" title=""></img></a></li><li class="sectbody even treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-16032020/!170570/" ratioURL-ressource="170570" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 16.03.2020</h4><h3>Schluss mit Panik</h3><p>Christian findet, es wird zu viel über die Corona-Pandemie berichtet. Denn auch Angst kann krank machen.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Schluss-mit-Panik.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-09032020/!170509/" ratioURL-ressource="170509" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 09.03.2020</h4><h3>Inklusion in Schulen</h3><p>Christian hat einen leeren Klassenraum gezeichnet. Er fordert mehr Geld für Bildung und mehr Inklusion.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_Schulen.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-02032020/!170454/" ratioURL-ressource="170454" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 02.03.2020</h4><h3>Laschet ist der Schnellste </h3><p>Christian glaubt, Armin Laschet könne Merz im Rennen um den CDU-Vorsitz noch einholen. In einem schnelleren Auto.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Laschert.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-17022020/!170390/" ratioURL-ressource="170390" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 17.02.2020</h4><h3>Moderne Kirche</h3><p>Die katholische Kirche ist ein Scheißverein, findet Christian. Doch auch die evengelischen Kirchen sind wenig inklusiv.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Christian-Specht-Moderne-Kirche.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-10022020/!170344/" ratioURL-ressource="170344" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 10.02.2020</h4><h3>Tabubruch </h3><p>Was in Thüringen passiert, ist sehr gefährlich. Mit AfD-Politikern darf man nicht zusammenarbeiten, findet Christian.  </p><img src="/uploads/images/300/Specht-Thueringen.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-03022020/!170277/" ratioURL-ressource="170277" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 03.02.2020</h4><h3>Ich wünschte, ich wäre Milchkönig</h3><p>Bei der Grünen Woche hat Christian Specht eine Milchkönigin getroffen. Eine Rolle, die ihm auch gefallen würde.  </p><img src="/uploads/images/300/Specht_Milchkoenig.jpg" alt="" title=""></img></a></li><li class="sectbody even treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-16012020/!170178/" ratioURL-ressource="170178" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 16.01.2020</h4><h3>Schlechtes Essen im Krankenhaus</h3><p>Christian Specht fragt sich, warum das Essen in Krankenhäusern so schlecht ist und was man dagegen tun kann.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_Krankenhausessen.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-06012020/!170134/" ratioURL-ressource="170134" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 06.01.2020</h4><h3>Lasst die Feuerwehr in Ruhe!</h3><p>Immer wieder werden Feuerwehrleute angegriffen. Christian Specht findet das unmöglich.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_Feuerwehr_01.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-31122019/!170109/" ratioURL-ressource="170109" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 31.12.2019</h4><h3>Mehr Mitsprache</h3><p>Christian Specht wünscht sich fürs neue Jahr Verbesserungen für Menschen mit Behinderung und für die SPD.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_2020.jpg" alt="" title=""></img></a></li><li class="sectbody odd treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-23122019/!170082/" ratioURL-ressource="170082" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 23.12.2019</h4><h3>Alles Gute!</h3><p>Christian Specht ist im Vorstand der Berliner Lebenshilfe. Die feiert im neuen Jahr ihren 60. Geburtstag.   <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_Lebnshilfe_01.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-16122019/!170061/" ratioURL-ressource="170061" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 16.12.2019</h4><h3>Rabbiner bei der Bundeswehr</h3><p>Die Bundeswehr will Militärrabbiner einführen. Christian findet es gut, wenn traumatisierte Soldaten jemanden zum Reden haben.  </p><img src="/uploads/images/300/Specht_Rabbi.jpg" alt="" title=""></img></a></li><li class="sectbody odd trodd online   leaded pictured leaded story"><a href="/Specht-der-Woche-09122019/!169997/" ratioURL-ressource="169997" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 09.12.2019</h4><h3>Gute Arbeit</h3><p>Christian Specht wünscht sich bessere Arbeitsbedingungen für Menschen mit Behinderung.  <span class="author">Christian Specht</span></p><img src="/uploads/images/300/Specht_gute_Arbeit.jpg" alt="" title=""></img></a></li><li class="sectbody last even treven online   leaded pictured leaded story"><a href="/Specht-der-Woche-02122019/!169966/" ratioURL-ressource="169966" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Specht der Woche 02.12.2019</h4><h3>Die Psychiatrie hat Probleme</h3><p>Christian sorgt sich um die Menschen, denen in Psychiatrien geholfen werden soll. Denn vieles läuft dort oft nicht ideal.  </p><img src="/uploads/images/300/Specht_Psychiatrie.jpg" alt="" title=""></img></a></li></ul></div></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid814586">
+    
+
+	<div role="region" id="" class="first odd sect sect_text  no_body"><div class="secthead" role="heading"><h2><a name="„Specht hat Recht“ – der Podcast von und mit Christian Specht und seinen Gästen"><span>„Specht hat Recht“ – der Podcast von und mit Christian Specht und seinen Gästen</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+<div role="region" id="" class="last even sect sect_videos style_videos "><ul role="directory" class="sectbody   directory"><li class=" first last odd trodd    video embed  pictured leaded" name="video_Podcast: Specht sagt, wer Recht hat"><a class="objlink pictured leaded noavatar" role="link"><h3>Podcast: Specht sagt, wer Recht hat</h3><p>Zwei taz-Redakteur:innen streiten über ein Thema der Woche. Christian Specht erteilt und entzieht das Wort und spricht am Ende das Urteil: Wer hat recht und warum?  </p><img src="/uploads/images/300/tzpodcast_SpechthatRecht_neutral_16-9_beta2.png" alt="" title=""></img><style class="referenced" type="text/html"><div role="region" id="" class="first last odd sect sect_video style_video "><div class="secthead" role="heading"><h2><a name="Podcast: Specht sagt, wer Recht hat"><span>Podcast: Specht sagt, wer Recht hat</span></a></h2></div><div class="sectbody"><div class="webelement-content-container" webelementid="video-odcastpechtsagtwerechthat"><div class="webelement-content-container-content sectbody isoverlay"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('video-odcastpechtsagtwerechthat');</script></div></div><p class="caption">                        Christian Specht lebt mit einer Beeinträchtigung, schreibt gerne Petitionen an die Politik und hat einen taz-Podcast: In „Specht hat Recht“ lässt er alle 14 Tage zwei taz-Mitarbeiter:innen über ein Thema der Woche diskutieren. Am Ende entscheidet er, wer von den beiden Recht hat und warum. | Mehr taz für die Ohren gibts auf <a xmlns="" href="http://www.taz.de/!p5171/" target="_blank">taz.de/podcast</a>                        </p></div></div></style><div class="webelement-html-content" webelementid="video-odcastpechtsagtwerechthat" data-initial-state="true"><noscript class="html-content webelement-html-content" type="text/plain"><script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="https://specht-hat-recht.podigee.io/embed?context=external"></script></noscript></div></a></li></ul></div><script type="text/javascript">
+	$('.video,.embed').each( function( i, n ){
+		var style='videos';
+		if( style =='videos' ) style ='video';
+		if( this.filOtaz_de_ajaxified ) return; this.filOtaz_de_ajaxified = true;
+		var me = $( this );
+		// script.referenced also in vimeoVideo.js
+		var html = me.find('>a.objlink >style.referenced').text();	
+
+		var open = function(){
+			var name = me.attr('name');
+			if( name.indexOf('Vimeo-video_') ==0 )
+				window.location.hash = '!vimeo='+ name.replace(/^Vimeo-video_/, '');
+			else	{
+				new filOtaz_de.Embed( html, { 
+					id: me.attr('name'),
+					type: style
+					} );
+				}
+			return false;
+			} 
+		me.click( open );
+
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!embed=') ==0 ) if( hashURL.split('=')[1] == i+1 ) open();
+			};
+		checkHash(); $(window).hashchange( checkHash );
+
+		});
+	</script>
+
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_special-black style_special-black "><div class="secthead" role="heading"><h2><a name="Kurze Sätze, keine Fremdwörter – taz-Texte in Leichter Sprache"><span>Kurze Sätze, keine Fremdwörter – taz-Texte in Leichter Sprache</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first last odd trodd    pictured"><a href="/!p5097//" target="_blank" class="objlink brief pictured noavatar" role="link"><h3>Hier geht es zu tazleicht</h3><img src="/uploads/images/624/taz-leicht_1200x300.png" alt="" title=""></img></a></li></ul></div><div class="rack" id="xid737233">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="Kontakt taz Info"><span>Kontakt taz Info</span></a></h2></div><div class="sectbody"><img src="/uploads/images/70/kontakt2_500x500.png" alt="" title=""></img><p>  Friedrichstr. 21 
+</p><p> 10969 Berlin                                                             
+</p><p>  Telefon: 030 - 25 902 -0                          
+</p><p>  Nutzen Sie unser <a href="http://www.taz.de/!112355/" target="_blank">Kontaktformular</a>                  
+</p><p> </p><p>  <i xmlns="">  </i>                
+</p><p>  <i xmlns="">Hier erreichen Sie uns anonym und verschlüsselt: das <a href="https://informant.taz.de/" target="_blank">Informanten-Postfach</a> des taz-Rechercheressorts.</i>  </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/mit-behinderung/Specht-der-Woche/!p5044"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="https://gazete.taz.de/" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="https://migration-control.taz.de/#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/!p5044/" id="menu_p5123"><span itemprop="title">Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 15:46:22+01:00--></html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 15:35:04+01:00 page_id=4701 :: Schwerpunkt US-Präsidentschaftswahl 2020--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	-->
+<!-- Mirrored from taz.de/Schwerpunkt-US-Praesidentschaftswahl-2020/!t5575916/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Nov 2020 15:03:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4701--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>US-Präsidentschaftswahl 2020 - Schwerpunkt auf taz.de</title><meta name="author" content="taz. die tageszeitung"></meta><meta name="description" content="Am 3. November 2020 haben die USA einen neuen Präsidenten gewählt: Der Demokrat Joe Biden, langjähriger Senator und von 2009 bis 2017 Vize unter Barack Obama, hat sich gegen Donald Trump durchgesetzt. Seine Vizepräsidentin wird die 56-jährige Kamala Harris."></meta><meta name="keywords" content="US-Präsidentschaftswahl 2020, Schwerpunkte, Nachrichten, News, taz, tageszeitung "></meta><meta name="taz:title" data-id="t5575916" content="Schwerpunkt US-Präsidentschaftswahl 2020"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:site_name" content="taz.de"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta property="og:type" content="article"></meta><meta property="og:title" content="Schwerpunkt US-Präsidentschaftswahl 2020"></meta><meta property="twitter:title" content="Schwerpunkt US-Präsidentschaftswahl 2020"></meta><meta property="og:description" content="Am 3. November 2020 haben die USA einen neuen Präsidenten gewählt: Der Demokrat Joe Biden, langjähriger Senator und von 2009 bis 2017 Vize unter Barack Obama, hat sich gegen Amtsinhaber Donald Trump durchgesetzt. Zusammen mit Biden angetreten ist Kamala Harris: Die 56-jährige Juristin wird als erste Frau in der Geschichte der USA das Amt der Vizepräsidentin bekleiden. Am 20. Januar 2021 findet die Vereidigung beider PolitikerInnen statt."></meta><meta property="twitter:description" content="Am 3. November 2020 haben die USA einen neuen Präsidenten gewählt: Der Demokrat Joe Biden, langjähriger Senator und von 2009 bis 2017 Vize unter Barack Obama, hat sich gegen Amtsinhaber Donald Trump durchgesetzt. Zusammen mit Biden angetreten ist Kamala Harris: Die 56-jährige Juristin wird als erste Frau in der Geschichte der USA das Amt der Vizepräsidentin bekleiden. Am 20. Januar 2021 findet die Vereidigung beider PolitikerInnen statt."></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:url" content="https://taz.de/!t5575916/"></meta><meta property="og:image" content="../../picture/3265296/948/26146513.jpg"></meta><meta name="twitter:image" content="../../picture/3265296/948/26146513.jpg"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"t5575916" // String
+            , page_title_enc      :"t5575916: Schwerpunkt US-Präsidentschaftswahl 2020" // String
+            , custom_url_enc      :"/!t5575916" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"SCHWERPUNKT" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : true  // Boolean
+            , is_article          : false  // Boolean
+            , has_tags            : false  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "../../lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="../../lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="../../lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="index.html"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schwerpunkt US-Präsidentschaftswahl 2020" href="https://taz.de/Schwerpunkt-US-Praesidentschaftswahl-2020/!t5575916;rss/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="../../%21p4608%3brss/index.html"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="../../index.html"></link><link rel="copyright" type="text/html" title="Impressum" href="../../6/impressum/index.html"></link><link rel="stylesheet" type="text/css" media="screen, print" href="../../lib/ch/web/css/news2020-10-20_52.css"></link><link href="../../lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="../../uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="../../uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="../../lib/ch/web/js/2020-10-20_52.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"t5575916" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Schwerpunkte" // String
+            , is_article      : false  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="../../../script.ioam.de/iam.js"></script><script async="async" src="../../../www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Schwerpunkte';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['t5575916']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['ros_billboard_1', 'fireplace_mitte']
+        ,'ros_billboard-1' :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+                if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="../../apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="../../apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="../../apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="../../apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="../../apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="../../apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="../../apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="../../apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="../../apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="../../android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png"></link><link rel="manifest" href="../../manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="../../stats/piwikcaeb.gif?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><ul style="display: none" itemscope="" itemtype="../../../schema.org/Webpage.html"><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="../../index.html"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="../../../schema.org/ImageObject.html"><img itemprop="url" alt="taz logo" src="../../lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li></ul><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Schwerpunkte/Schwerpunkt-US-Praesidentschaftswahl-2020",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="../../%21p4209/index.html#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="../../%21p4271/index.html#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="../../%21p4697/index.html#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="../../../shop.taz.de/index.html#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="../../Info/%21p4206/index.html" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="../../%21p4233/index.html" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="../../Panter-Preis/%21p4207/index.html" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="../../%21p4791/index.html#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="../../%21p5099/index.html" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="../../Anzeigen/%21p4288/index.html" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="../../Podcast/%21p5171/index.html" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="../../Bewegung/%21p4715/index.html" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="../../Kantine/%21p4237/index.html" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="../../../blogs.taz.de/index.html" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="../../%21p5298/index.html" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="../../%21p5297/index.html" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="../../%21p4662/index.html" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="../../Nord/%21p4962/index.html" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="../../Panter-Stiftung/%21p4258/index.html" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="../../Reisen-in-die-Zivilgesellschaft/%21p4310/index.html" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="../../../monde-diplomatique.de/index.html" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="../../Recherchefonds-Ausland/%21p5062/index.html" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="../../Archiv/%21p4311/index.html" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="../../%21p4905/index.html" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="../../%21p5044/index.html" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="../../Hilfe/%21p4591/index.html" id="menu_p4591"><span>Hilfe</span></a></li></ul><span id="ad_bin_ros_billboard_1" class="ad_bin sold contentad"><div id="ad_zone_ros_billboard_1" name="ros_billboard-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_billboard_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><div class="full prefixed news page first odd first_page n1"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="../../index.html" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="../../Politik/%21p4615/index.html" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="../../Oeko/%21p4610/index.html" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="../../Gesellschaft/%21p4611/index.html" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="../../Kultur/%21p4639/index.html" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="../../Sport/%21p4646/index.html" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="../../Berlin/%21p4649/index.html" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="../../Nord/%21p4650/index.html" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="../../Wahrheit/%21p4644/index.html" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="https://taz.de/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="../../lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><div role="region" id="" class="first odd sect sect_schwerpunkt first fullheader "><div class="secthead" role="heading"><a class="pictured" name="US-Präsidentschaftswahl 2020"><img src="../../picture/3265296/948/26146513.jpg"></img></a><h2><a name="US-Präsidentschaftswahl 2020"><span>US-Präsidentschaftswahl 2020</span></a></h2></div><div class="sectbody"><p xmlns="" class="bodytext" pos="1">Am 3. November 2020 haben die USA einen neuen Präsidenten gewählt: Der Demokrat Joe Biden, langjähriger Senator und von 2009 bis 2017 Vize unter Barack Obama, hat sich gegen Amtsinhaber Donald Trump durchgesetzt. Zusammen mit Biden angetreten ist Kamala Harris: Die 56-jährige Juristin wird als erste Frau in der Geschichte der USA das Amt der Vizepräsidentin bekleiden. Am 20. Januar 2021 findet die Vereidigung beider PolitikerInnen statt.</p>
+<script>
+						readmore( $(document.getLatestElement() ).closest('.sectbody')	 )
+					</script></div></div><span class="body" role="main"><!-- DEBUG head: 0 extras here, 1 from directory Schwerpunkt US-Präsidentschaftswahl 2020, thats 1 merged-->
+      
+      <div class="webelement-content-container" webelementid="html-5721524"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5721524"><noscript class="html-content" type="text/plain"><div data-app='dpa-electionslive' data-embed-type='pym' data-competition-id='pw_us' data-language='de' data-standalone='ranking' data-phase='election' data-view='small' data-src="https://d3ak46ifsn9mnh.cloudfront.net/customers/praesidentschaftswahl-usa2020/aws/dpa-shop/html/index.html?customer=taz-verlags-und-vertriebs-gmbh-5001569" data-path='https://d3ak46ifsn9mnh.cloudfront.net/pw_us/'></div>
+<script type='text/javascript' src='../../../d2c0cdjj8gf5hk.cloudfront.net/js/dpa.js'></script></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5721524');</script></div></div>
+    <div role="region" id="xid459785" class="even sect sect_leads style_leads  first_sect_leads oddpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   report article leaded pictured"><a href="../../Nach-der-US-Praesidentschaftswahl/%215728509/index.html" ratioURL-ressource="5728509" class="objlink report article leaded pictured noavatar" role="link"><h4>Nach der US-Präsidentschaftswahl</h4><h3>Trump-Fans protestieren in D.C.</h3><p>Tausende Anhänger fordern in Washington eine zweite Amtszeit für den amtierenden US-Präsidenten. Der winkt ihnen nur kurz aus dem Auto zu.  </p><img src="../../picture/4500982/624/Protest-Trump-Washington-1.jpg" alt="Menschen mit Flaggen vor dem Gebäude des Obersten Gerichtshofs." title="Menschen mit Flaggen vor dem Gebäude des Obersten Gerichtshofs."></img></a></li><li class="sectbody even trodd online   essay article leaded pictured"><a href="../../Wende-in-den-USA-nach-den-Wahlen/%215725896/index.html" ratioURL-ressource="5725896" class="objlink essay article leaded pictured noavatar" role="link"><h4>Wende in den USA nach den Wahlen</h4><h3>Die Versöhnung fällt aus</h3><span class="category_and_name"><span>Essay </span><span class="author"><p>von <b>Torben Lütjen</b> </p></span></span><p>Biden wird die Spaltung nicht überwinden, denn weder Republikaner noch Demokraten wollen das. Das ist vielleicht auch okay.  </p><img src="../../picture/4499846/192/26286081-1.jpg" alt="Illustration: Auf einem Tisch liegen die Umrisse von mehreren US-Bundesstaaten. Sie werfen Schatten auf den Tisch. Unter dem Tisch liegt ein geöffneter Karton eines Puzzles, auf dem Steht „USA 2020“." title="Illustration: Auf einem Tisch liegen die Umrisse von mehreren US-Bundesstaaten. Sie werfen Schatten auf den Tisch. Unter dem Tisch liegt ein geöffneter Karton eines Puzzles, auf dem Steht „USA 2020“."></img></a></li><li class="sectbody last odd treven online   subjective column article leaded pictured"><a href="../../Nach-der-US-Wahl/%215725852/index.html" ratioURL-ressource="5725852" class="objlink subjective column article leaded pictured avatar" role="link"><h4>Nach der US-Wahl</h4><h3>Überhebliche Staaten von Amerika</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="../../kommune/files/images/profile/70x70/38.png"></img><span>Kolumne<b> Macht </b></span><span class="author"><p>von <b>Bettina Gaus</b> </p></span><p>In die Kommentierung der Wahl in den USA hat sich ein Ton eingeschlichen, der unserer Autorin missfällt. Eine Ermahnung – auch an Joe Biden.  </p></span><img src="../../picture/4500452/192/Bill_of_Rights_USA_election_Wahl_Demokratie-1.jpg" alt="Fernsehmonitore, zahlreiche Technik und Kameras im Besprechungsraum des Weißen Hauses" title="Fernsehmonitore, zahlreiche Technik und Kameras im Besprechungsraum des Weißen Hauses"></img></a></li></ul></div><span id="ad_bin_uebersicht_board_1" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_board_1" name="uebersicht_board-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_board_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><div role="region" id="xid490804" class="even sect sect_leads style_leads oddpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   report article leaded pictured"><a href="../../Streit-unter-den-Demokraten-in-den-USA/%215725940/index.html" ratioURL-ressource="5725940" class="objlink report article leaded pictured noavatar" role="link"><h4>Streit unter den Demokraten in den USA</h4><h3>Nach dem Fest</h3><p>Ohne die Linken wäre der moderate Demokrat Biden nicht gewählt worden. Aber kaum haben sie gesiegt, verstricken sich die Demokraten in Flügelkämpfe.  <span class="author">Dorothea Hahn</span></p><img src="../../picture/4500573/192/26258659-1.jpg" alt='Eine Frau liegt auf dem Boden, auf ihr leigt ein Plakat mit der Aufschrift "Biden Harris"' title='Eine Frau liegt auf dem Boden, auf ihr leigt ein Plakat mit der Aufschrift "Biden Harris"'></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><a href="https://taz.de/Wahlleute-aller-US-Bundesstaaten-stehen-fest/!5728486/" ratioURL-ressource="5728486" class="objlink report article leaded pictured noavatar" role="link"><h4>Wahlleute aller US-Bundesstaaten stehen fest</h4><h3>306 für Joe Biden</h3><p>US-Sender haben bei der Wahl den Sieger in den letzten beiden Bundesstaaten ausgerufen. Biden kommt auf dieselbe Zahl von Wahlleuten wie Trump vor vier Jahren.  </p><img src="../../picture/4500805/192/JoeBidenwinkt-1.jpg" alt="Ein Maske tragender Joe Biden winkt in die Kamera" title="Ein Maske tragender Joe Biden winkt in die Kamera"></img></a></li><li class="sectbody last odd treven online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">13. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5725892"></meta><meta itemprop="cms-obj-ID" content="4500115"></meta></div><a href="../../Militaerausgaben-und-Nato-Interessen/%215725892/index.html" ratioURL-ressource="5725892" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Militärausgaben und Nato-Interessen</h4><h3>Zu viel verlangt</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Tobias Schulze</b> </p></span></span><p>Nach dem Sieg von Joe Biden soll Deutschland wieder mehr für das Militär ausgeben. Die Forderung ist nicht neu, die Begründung aber schon.  </p><img src="../../picture/4500115/192/NATO_Ausgaben_Deutschland_USA_Joe_Biden_2_Prozent_-1.jpg" alt="Ein Marinesoldat steht auf der Luke eines U-Boots" title="Ein Marinesoldat steht auf der Luke eines U-Boots"></img></a></li></ul></div><!-- DEBUG belly: 0 extras here, 1 from directory Schwerpunkt US-Präsidentschaftswahl 2020, thats 1 merged-->
+      
+      <div class="webelement-content-container" webelementid="html-5721559"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5721559"><noscript class="html-content" type="text/plain"><div data-app='dpa-electionslive' data-embed-type='pym' data-competition-id='pw_us' data-language='de' data-standalone='votingAreas' data-phase='election' data-view='map' data-display-total='false' data-src="https://d3ak46ifsn9mnh.cloudfront.net/customers/praesidentschaftswahl-usa2020/aws/dpa-shop/html/index.html?customer=taz-verlags-und-vertriebs-gmbh-5001569" data-path='https://d3ak46ifsn9mnh.cloudfront.net/pw_us/'></div>
+<script type='text/javascript' src='../../../d2c0cdjj8gf5hk.cloudfront.net/js/dpa.js'></script>
+
+
+
+<style>
+.thema.clip_large .webelement-content-container[webelementid=html-5721559] .webelement-content-container-inner {
+   display: none;
+}
+}
+</style></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5721559');</script></div></div>
+    <div role="region" id="xid835564" class="even sect sect_leads style_leads oddpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   subjective column article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">13. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5725891"></meta><meta itemprop="cms-obj-ID" content="4499917"></meta></div><a href="https://taz.de/USA-nach-den-Wahlen/!5725891/" ratioURL-ressource="5725891" class="objlink subjective column article leaded pictured avatar" role="link"><h4>USA nach den Wahlen</h4><h3>Zum Weinen</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="../../kommune/files/images/profile/70x70/33000.png"></img><span>Kolumne<b> Der rote Faden </b></span><span class="author"><p>von <b>Johanna Roth</b> </p></span><p>Wann hat sich die Welt wohl zuletzt so angefühlt wie an diesem Tag? Bei der Mondlandung? Beim Mauerfall? Eindrücke aus Philadelphia.  </p></span><img src="../../picture/4499917/192/Wahl_election_USA_Sieg_Joe_Biden_Euphorie_-1.jpg" alt="Eine Frau hält die Flagge der Vereinigten Staaten von Amerika in Siegerpose in der Hand" title="Eine Frau hält die Flagge der Vereinigten Staaten von Amerika in Siegerpose in der Hand"></img></a></li><li class="sectbody even trodd online   subjective column article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">13. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5728223"></meta><meta itemprop="cms-obj-ID" content="4498928"></meta></div><a href="https://taz.de/Biden-und-Harris-und-die-Revolution/!5728223/" ratioURL-ressource="5728223" class="objlink subjective column article leaded pictured avatar" role="link"><h4>Biden und Harris und die Revolution</h4><h3>Murksisten im Weißen Haus</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="../../kommune/files/images/profile/70x70/131.png"></img><span>Kolumne<b> Wir retten die Welt </b></span><span class="author"><p>von <b>Bernhard Pötter</b> </p></span><p>Joe Biden ist noch nicht US-Präsident, er hat bisher weder Personal noch Programm. Aber wir wissen schon, dass er die Welt nicht retten wird.  </p></span><img src="../../picture/4498928/192/26282961-1.jpg" alt="Kamala Harris und Joe Biden halten sich an den Händen und recken diese in Siegerpose nach oben" title="Kamala Harris und Joe Biden halten sich an den Händen und recken diese in Siegerpose nach oben"></img></a></li><li class="sectbody odd treven online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">13. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723651"></meta><meta itemprop="cms-obj-ID" content="4498239"></meta></div><a href="https://taz.de/Erste-US-Vizepraesidentin-Harris/!5723651/" ratioURL-ressource="5723651" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Erste US-Vizepräsidentin Harris</h4><h3>Kama la la Land</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Johanna Soll</b> </p></span></span><p>Die mediale Euphorie über die erste US-Vizepräsidentin Kamala Harris muss man auch als schwarze Frau nicht teilen. Sie steht nicht für Veränderung.  </p><img src="../../picture/4498239/192/US-Vizepraesidentin_Kamala_Harris-1.jpg" alt="US-Vizepräsidentin Kamala Harris vor einer großen USA Flagge hebt die rechte Hand." title="US-Vizepräsidentin Kamala Harris vor einer großen USA Flagge hebt die rechte Hand."></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">12. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5728179"></meta><meta itemprop="cms-obj-ID" content="4496644"></meta></div><a href="https://taz.de/Uebergang-in-den-USA/!5728179/" ratioURL-ressource="5728179" class="objlink report article leaded pictured noavatar" role="link"><h4>Übergang in den USA</h4><h3>Biden setzt auf Bewährtes</h3><p>Der langjährige Berater des gewählten Präsidenten Ron Klain soll Stabschef im Weißen Haus werden. Die Republikaner erobern weiteren Senatssitz.  </p><img src="../../picture/4496644/192/Ron26279104-1.jpg" alt="Gruppenbild mit Ron Klain, vielleicht bald neuer Stabschef im Weißen Haus" title="Gruppenbild mit Ron Klain, vielleicht bald neuer Stabschef im Weißen Haus"></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">11. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5728013"></meta><meta itemprop="cms-obj-ID" content="4494337"></meta></div><a href="https://taz.de/Biden-ueber-amtierenden-US-Praesidenten/!5728013/" ratioURL-ressource="5728013" class="objlink report article leaded pictured noavatar" role="link"><h4>Biden über amtierenden US-Präsidenten</h4><h3>Trumps Verhalten „peinlich“</h3><p>Donald Trump hält weiterhin an seinen Betrugsvorwürfen fest, Joe Biden nennt das „peinlich“. Auch Außenminister Pompeo stellt nun das Wahlergebnis infrage.  </p><img src="../../picture/4494337/192/26273434-1.jpg" alt="Biden steht an einem Redepult und gestikuliert, im Hintergrund US-Flaggen." title="Biden steht an einem Redepult und gestikuliert, im Hintergrund US-Flaggen."></img></a></li><li class="sectbody even treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">11. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5728012"></meta><meta itemprop="cms-obj-ID" content="4494318"></meta></div><a href="https://taz.de/Demokraten-nach-der-US-Wahl/!5728012/" ratioURL-ressource="5728012" class="objlink report article leaded pictured noavatar" role="link"><h4>Demokraten nach der US-Wahl</h4><h3>Mehrheit im Repräsentantenhaus</h3><p>Mit mindestens 218 von 435 halten die Demokraten eine knappe Mehrheit im US-Repräsentantenhaus. Sprecherin Nancy Pelosi spricht von einem „Hammer“.  </p><img src="../../picture/4494318/192/26245759-1.jpg" alt="Nancy Pelosi steht mit einer Maske an einem Redepult und gestikuliert." title="Nancy Pelosi steht mit einer Maske an einem Redepult und gestikuliert."></img></a></li><li class="sectbody last odd trodd online   subjective column article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">11. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723946"></meta><meta itemprop="cms-obj-ID" content="4493515"></meta></div><a href="https://taz.de/Was-von-Trump-bleibt/!5723946/" ratioURL-ressource="5723946" class="objlink subjective column article leaded pictured noavatar" role="link"><h4>Was von Trump bleibt</h4><h3>Wahn und Wirklichkeit</h3><span class="category_and_name"><span>Kolumne<b> Schlagloch </b></span><span class="author"><p>von <b>Georg Seeßlen</b> </p></span><p>Das vorläufige Ende der Trump-Ära hat uns eine geschichtliche Atempause verschafft. Die müssen wir nutzen, um zu verstehen, was da geschah.  </p></span><img src="../../picture/4493515/192/Trump_Aera_USA-1.jpg" alt="Die Beine Donald Trumps und sein Schattenwurf" title="Die Beine Donald Trumps und sein Schattenwurf"></img></a></li></ul></div><div role="region" id="xid835649" class="odd sect sect_leads style_leads oddpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">10. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726960"></meta><meta itemprop="cms-obj-ID" content="4489840"></meta></div><a href="https://taz.de/US-Republikaner-nach-der-Wahl/!5726960/" ratioURL-ressource="5726960" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>US-Republikaner nach der Wahl</h4><h3>Von Angst getrieben</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Bernd Pickert</b> </p></span></span><p>Nach der US-Wahl haben die Republikaner ein Problem: Donald Trump ist noch immer in der Lage, seine Partei zu zerstören – notfalls von außen.  </p><img src="../../picture/4489840/192/US_Wahl_Republikaner_Trump__Gefahr-1.jpg" alt="Die Silhouette Donald Trumps vor schwarzem Hintergrund und zwei Scheinwerfern" title="Die Silhouette Donald Trumps vor schwarzem Hintergrund und zwei Scheinwerfern"></img></a></li><li class="sectbody even trodd online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">10. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724041"></meta><meta itemprop="cms-obj-ID" content="4489477"></meta></div><a href="https://taz.de/USA-nach-den-Wahlen/!5724041/" ratioURL-ressource="5724041" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>USA nach den Wahlen</h4><h3>Trump geht, die Wut bleibt</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Stefan Reinecke</b> </p></span></span><p>Die Linke braucht ein Konzept gegen den leicht entflammbaren Hass auf liberale Eliten: eine ausgleichende, moderate und entschieden soziale Politik.  </p><img src="../../picture/4489477/192/Trump_Anhaenger__Bevoelkerung_US_Wahl-1.jpg" alt="Trump-Anhänger in Philadelphia mit roten Trump-Mützen rufen Biden-Fans etwas engegen" title="Trump-Anhänger in Philadelphia mit roten Trump-Mützen rufen Biden-Fans etwas engegen"></img></a></li><li class="sectbody odd treven online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724046"></meta><meta itemprop="cms-obj-ID" content="4490141"></meta></div><a href="https://taz.de/Naechste-US-Vizepraesidentin-Kamala-Harris/!5724046/" ratioURL-ressource="5724046" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Nächste US-Vizepräsidentin Kamala Harris</h4><h3>Jenseits des Männeruniversums</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Patricia Hecht</b> </p></span></span><p>Dass Kamala Harris US-Vizepräsidentin wird, ist Grund zum Feiern. Parität ist verwirklicht, wenn politischer Streit zwischen Frauen geführt wird.  </p><img src="../../picture/4490141/192/Kamala-Harris-Kommentar-1.jpg" alt="US-Vizepräsidentin elect am Rednerpult" title="US-Vizepräsidentin elect am Rednerpult"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724029"></meta><meta itemprop="cms-obj-ID" content="4489965"></meta></div><a href="https://taz.de/Joe-Biden-stellt-Plaene-fuer-USA-vor/!5724029/" ratioURL-ressource="5724029" class="objlink report article leaded pictured noavatar" role="link"><h4>Joe Biden stellt Pläne für USA vor</h4><h3>Corona wird Sache der Experten</h3><p>Für den gewählten US-Präsidenten ist der Kampf gegen die Pandemie zentral. Weitere Prioritäten: Wirtschaftskrise, Rassismus und Klimawandel.  <span class="author">Stefan Schaaf</span></p><img src="../../picture/4489965/192/Coronapandemie_USA_Joe_Biden-1.jpg" alt="Joe Biden vor schwarzem Hintergrund zeigt mit der rechten Hand nach links, während sich die Hand spiegelt und damit auf Joe Biden selbst zeigt." title="Joe Biden vor schwarzem Hintergrund zeigt mit der rechten Hand nach links, während sich die Hand spiegelt und damit auf Joe Biden selbst zeigt."></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724030"></meta><meta itemprop="cms-obj-ID" content="4489866"></meta></div><a href="https://taz.de/US-Wahlen-und-Trumps-Betrugsverdacht/!5724030/" ratioURL-ressource="5724030" class="objlink report article leaded pictured noavatar" role="link"><h4>US-Wahlen und Trumps Betrugsverdacht</h4><h3>Gerichte lassen Trump abblitzen</h3><p>Bislang sind die Anwälte von US-Präsident Donald Trump vor Gericht komplett gescheitert. Republikaner*innen fällt es dennoch schwer, sich abzugrenzen.  <span class="author">Bernd Pickert</span></p><img src="../../picture/4489866/192/Donald_Trump_Gerichtsentscheidung_US_Wahl__Wahlbetrug-1.jpg" alt="Donald Trump spricht vor Anhängern in North Carolina. Er trägt eine rote Mütze, seine Anhänger ebenfalls." title="Donald Trump spricht vor Anhängern in North Carolina. Er trägt eine rote Mütze, seine Anhänger ebenfalls."></img></a></li><li class="sectbody even treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726954"></meta><meta itemprop="cms-obj-ID" content="4488836"></meta></div><a href="https://taz.de/AfD-streitet-ueber-Joe-Biden/!5726954/" ratioURL-ressource="5726954" class="objlink report article leaded pictured noavatar" role="link"><h4>AfD streitet über Joe Biden</h4><h3>Kritik an Weidel und Gauland</h3><p>Die Fraktionsspitze hat dem neuen US-Präsidenten gratuliert. Aber andere AfD-Abgeordnete verbreiten lieber Trumps wüste Anschuldigungen.  <span class="author">Sabine am Orde</span></p><img src="../../picture/4488836/192/Weidel_Gauland_AFD_US_Wahl_Biden-1.jpg" alt="Die beiden AfD FraktionschefInnen, Alice Weidel Alexander Gauland haben Biden sitzen im Bundestag" title="Die beiden AfD FraktionschefInnen, Alice Weidel Alexander Gauland haben Biden sitzen im Bundestag"></img></a></li><li class="sectbody last odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726993"></meta><meta itemprop="cms-obj-ID" content="4489415"></meta></div><a href="https://taz.de/Merkel-gratuliert-Joe-Biden-zum-Wahlsieg/!5726993/" ratioURL-ressource="5726993" class="objlink report article leaded pictured noavatar" role="link"><h4>Merkel gratuliert Joe Biden zum Wahlsieg</h4><h3>Ziemlich erleichtert</h3><p>Die Bundeskanzlerin äußert sich erstmals persönlich zum Ausgang der US-Präsidentschaftswahl. Sie betont zugleich mehr europäische Eigenverantwortung.  <span class="author">Daniel Godeck</span></p><img src="../../picture/4489415/192/angela-merkel-gratuliert-joe-biden-kamala-harris-usa-praesidentschaft-wahl-1.jpg" alt="Die Bundeskanzlerin Angela Merkel" title="Die Bundeskanzlerin Angela Merkel"></img></a></li></ul></div><div role="region" id="xid835734" class="even sect sect_leads style_leads evenpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">9. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724116"></meta><meta itemprop="cms-obj-ID" content="4488177"></meta></div><a href="https://taz.de/Mehrheit-im-US-Senat-fuer-Demokratinnen/!5724116/" ratioURL-ressource="5724116" class="objlink report article leaded pictured noavatar" role="link"><h4>Mehrheit im US-Senat für Demokrat:innen</h4><h3>In Georgia geht die Wahl weiter</h3><p>Mit einem Sieg in Georgia können die Demokrat:innen den US-Senat für sich gewinnen. Die Stichwahlen finden erst Anfang Januar 2021 statt.  <span class="author">Stefan Schaaf</span></p><img src="../../picture/4488177/192/usa-wahl-trump-biden-senat-georgia-1.jpg" alt="Drei Schwarze Frauen in Klamotten mit der Aufschrift Black Lives Matter tanzen." title="Drei Schwarze Frauen in Klamotten mit der Aufschrift Black Lives Matter tanzen."></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726849"></meta><meta itemprop="cms-obj-ID" content="4488203"></meta></div><a href="https://taz.de/Trumps-Anfechtung-des-Ergebnisses/!5726849/" ratioURL-ressource="5726849" class="objlink report article leaded pictured noavatar" role="link"><h4>Trumps Anfechtung des Ergebnisses</h4><h3>Die US-Wahlen sind vorbei. Oder?</h3><p>Eine Neuauszählung der Stimmzettel würde am Ergebnis wohl nichts ändern. Aber ohne eine Einigung könnten Parlamente selbst Wahlleute benennen.  <span class="author">Bernd Pickert</span></p><img src="../../picture/4488203/192/Trump_Anwaelte_Neuauszaehlung_Gerichte_Wahlleute-1.jpg" alt="Ein Mann packt Verkehrshütchen zusammen, im Hintergrund sind eingerollte US-Flaggen" title="Ein Mann packt Verkehrshütchen zusammen, im Hintergrund sind eingerollte US-Flaggen"></img></a></li><li class="sectbody odd treven online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724101"></meta><meta itemprop="cms-obj-ID" content="4488150"></meta></div><a href="https://taz.de/Kuenftige-Vizepraesidentin-Kamala-Harris/!5724101/" ratioURL-ressource="5724101" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Künftige Vizepräsidentin Kamala Harris</h4><h3>Vorbild mit Haken</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Gunnar Hinck</b> </p></span></span><p>Zum ersten Mal wird eine Frau Vizepräsidentin in den USA. Doch Kamala Harris steht auch für eine Leistungsideologie, die viele Menschen ausschließt.  </p><img src="../../picture/4488150/192/Kamala_Harris_Vizepraesidentin-1.jpg" alt="Portrait von Kamala Harris im weißen Anzug - während ihrer Rede, nachdem der Wahlsieg verkündet wurde" title="Portrait von Kamala Harris im weißen Anzug - während ihrer Rede, nachdem der Wahlsieg verkündet wurde"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726865"></meta><meta itemprop="cms-obj-ID" content="4488234"></meta></div><a href="https://taz.de/Medien-bei-US-Wahlen/!5726865/" ratioURL-ressource="5726865" class="objlink report article leaded pictured noavatar" role="link"><h4>Medien bei US-Wahlen</h4><h3>Fox News braucht Trump nicht mehr</h3><p>Noch-Präsident Trump bekommt bei Lügen nicht mehr volle Rückendeckung seiner Lieblingsmedien. Dennoch nehmen sie Bidens Wahlsieg nicht einfach hin.  <span class="author">Peter Weissenburger</span></p><img src="../../picture/4488234/192/Medien_Trump_Fox_News_Rueckendeckung-1.jpg" alt="Donald Trump im Presseraum vor JournalistInnen" title="Donald Trump im Presseraum vor JournalistInnen"></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726859"></meta><meta itemprop="cms-obj-ID" content="4488274"></meta></div><a href="https://taz.de/Merkel-beglueckwuenscht-Biden/!5726859/" ratioURL-ressource="5726859" class="objlink report article leaded pictured noavatar" role="link"><h4>Merkel beglückwünscht Biden</h4><h3>Berlin atmet auf</h3><p>Nach den US-Wahlen hofft die Bundesregierung auf einen Neuanfang. Kanzlerin Merkel nennt die transatlantische Freundschaft „unersetzlich“.  <span class="author">Ulrich Schulte</span></p><img src="../../picture/4488274/192/merkel-usa-biden-1.jpg" alt="Angela Merkel sitzt in blauem Blazer und mit geschlossenem Mund vor einem Mikrofon." title="Angela Merkel sitzt in blauem Blazer und mit geschlossenem Mund vor einem Mikrofon."></img></a></li><li class="sectbody last even treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724115"></meta><meta itemprop="cms-obj-ID" content="4488183"></meta></div><a href="https://taz.de/Internationale-Reaktionen-auf-Wahlsieg-Bidens/!5724115/" ratioURL-ressource="5724115" class="objlink report article leaded pictured noavatar" role="link"><h4>Internationale Reaktionen auf Wahlsieg Bidens</h4><h3>Hoffnung auf mehr Frieden</h3><p>Die EU gratuliert Biden zum Wahlsieg, Russland und China zögern noch. Und der Iran ruft den Demokraten zur Rückkehr zum Atomabkommen auf.  <span class="author">Felix Lee</span></p><img src="../../picture/4488183/192/biden-usa-wahl-reaktionen-ausland-eu-1.jpg" alt="Joe Biden zeigt mit dem Finger in eine Richtung" title="Joe Biden zeigt mit dem Finger in eine Richtung"></img></a></li></ul></div><div role="region" id="xid792664" class="last odd sect sect_leads style_leads evenpicts "><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724220"></meta><meta itemprop="cms-obj-ID" content="4488082"></meta></div><a href="https://taz.de/Erste-schwarze-US-Vizepraesidentin-Harris/!5724220/" ratioURL-ressource="5724220" class="objlink report article leaded pictured noavatar" role="link"><h4>Erste schwarze US-Vizepräsidentin Harris</h4><h3>„Ich bin, wer ich bin“</h3><p>Die Juristin Kamala Harris ging in ihrem Leben immer vorneweg. Dabei hat sie es immer wieder vermieden, ihre Identität in den Mittelpunkt zu stellen.  <span class="author">Bernd Pickert</span></p><img src="../../picture/4488082/192/kamala-harris-vize-praesidentin-usa-wahl-joe-biden-frau-siegerin-1.jpg" alt="Kamala Harris" title="Kamala Harris"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5724141"></meta><meta itemprop="cms-obj-ID" content="4487111"></meta></div><a href="https://taz.de/Klimaschutz-in-den-USA-unter-Biden/!5724141/" ratioURL-ressource="5724141" class="objlink report article leaded pictured noavatar" role="link"><h4>Klimaschutz in den USA unter Biden</h4><h3>Rückkehr zum Pariser Abkommen</h3><p>Joe Biden will einen ehrgeizigen Klimaschutz für die USA und die Welt. Donald Trump hat ihm ein klimapolitisches Trümmerfeld hinterlassen.  <span class="author">Bernhard Pötter</span></p><img src="../../picture/4487111/192/klimaschutz-usa-joe-biden-wahl-pariser-abkommen-1.jpg" alt="Ein Mitglied der Feuerwehr bekämpft bei Löscharbeiten einen Waldbrand in Calistoga, USA, im September." title="Ein Mitglied der Feuerwehr bekämpft bei Löscharbeiten einen Waldbrand in Calistoga, USA, im September."></img></a></li><li class="sectbody odd treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723536"></meta><meta itemprop="cms-obj-ID" content="4486239"></meta></div><a href="https://taz.de/Der-Wochenrueckblick/!5723536/" ratioURL-ressource="5723536" class="objlink report article leaded pictured noavatar" role="link"><h4>Der Wochenrückblick</h4><h3>Wo bleiben die Gummis?</h3><p>Donald Trump ist kein Ausrutscher der Geschichte, der Weg zu Waffen ist kurz und Kuba hat ein Kondomproblem. Das haben wir diese Woche gelernt.  <span class="author">Viktoria Morasch</span></p><img src="../../picture/4486239/192/5_Dinge_gelernt_Kondome_Kuba_Mangel-1.jpg" alt="drei Kondome ausgepackt in den Farben gelb, rot und schwarz" title="drei Kondome ausgepackt in den Farben gelb, rot und schwarz"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726831"></meta><meta itemprop="cms-obj-ID" content="4487100"></meta></div><a href="https://taz.de/Siegesrede-von-Joe-Biden-nach-US-Wahl/!5726831/" ratioURL-ressource="5726831" class="objlink report article leaded pictured noavatar" role="link"><h4>Siegesrede von Joe Biden nach US-Wahl</h4><h3>Sie wollen Amerika heilen</h3><p>In seiner Siegesrede verkündet Joe Biden, er wolle „ein Präsident für alle Amerikaner sein“. Amtsinhaber Trump erkennt seine Niederlage nicht an.  <span class="author">Hansjürgen Mai</span></p><img src="../../picture/4487100/192/harris-biden-usa-wahl-praesident-1.jpg" alt="Der nächste US-Präsident Joe Biden und seine Vizepräsidentin Kamala Harris lächeln sich an" title="Der nächste US-Präsident Joe Biden und seine Vizepräsidentin Kamala Harris lächeln sich an"></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">8. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726828"></meta><meta itemprop="cms-obj-ID" content="4487046"></meta></div><a href="https://taz.de/Jubel-in-New-York-City-ueber-Wahlergebnis/!5726828/" ratioURL-ressource="5726828" class="objlink report article leaded pictured noavatar" role="link"><h4>Jubel in New York City über Wahlergebnis</h4><h3>Freudentänze in Harlem</h3><p>New York City atmet auf. In der Hochburg der Demokratischen Partei feiern die Menschen den Wahlsieg von Joe Biden und Kamala Harris.  <span class="author">Dorothea Hahn</span></p><img src="../../picture/4487046/192/trump-verliert-usa-wahlen-joe-biden-kamala-harris-new-york-feier-demokraten-praesident-1.jpg" alt="Verkleidete tanzen in den Straßen von New York, im Bildfokus ein Donald Trump in Häftlingskleidung." title="Verkleidete tanzen in den Straßen von New York, im Bildfokus ein Donald Trump in Häftlingskleidung."></img></a></li><li class="sectbody even treven online   subjective commentary article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">7. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726810"></meta><meta itemprop="cms-obj-ID" content="4486891"></meta></div><a href="https://taz.de/Joe-Biden-wird-naechster-US-Praesident/!5726810/" ratioURL-ressource="5726810" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Joe Biden wird nächster US-Präsident</h4><h3>Eine Chance, mehr nicht</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Bernd Pickert</b> </p></span></span><p>Es ist erleichternd, dass Donald Trump nach nur einer Amtszeit abgewählt ist. Aber für eine erfolgreiche Präsidentschaft Biden reicht das nicht.  </p><img src="../../picture/4486891/192/USA-Joe-Biden-Kamala-Harris-1.jpg" alt='Fahne mit der Aufschrift "Biden" weht im Wind' title='Fahne mit der Aufschrift "Biden" weht im Wind'></img></a></li><li class="sectbody odd trodd online   essay article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">7. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723608"></meta><meta itemprop="cms-obj-ID" content="4486343"></meta></div><a href="https://taz.de/Trumps-Anhaenger-bei-den-US-Wahlen/!5723608/" ratioURL-ressource="5723608" class="objlink essay article leaded pictured noavatar" role="link"><h4>Trumps Anhänger bei den US-Wahlen</h4><h3>Besser als nichts</h3><span class="category_and_name"><span>Essay </span><span class="author"><p>von <b>Caroline Rosales</b> </p></span></span><p>Noch nie seit Richard Nixon haben so viele Nichtweiße einen Republikaner gewählt. Für sie ist Trump der personifizierte amerikanische Traum.  </p><img src="../../picture/4486343/192/26243527-1.jpg" alt="" title=""></img></a></li><li class="sectbody even trodd online   subjective column article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">7. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723607"></meta><meta itemprop="cms-obj-ID" content="4486146"></meta></div><a href="https://taz.de/Lob-an-die-Wahlhelfer-und--helferinnen/!5723607/" ratioURL-ressource="5723607" class="objlink subjective column article leaded pictured avatar" role="link"><h4>Lob an die Wahlhelfer und -helferinnen</h4><h3>Die, die wirklich zählen</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="../../kommune/files/images/profile/70x70/92.png"></img><span>Kolumne<b> Liebeserklärung </b></span><span class="author"><p>von <b>Doris Akrap</b> </p></span><p>Die Freiwilligen in den US-Wahllokalen verdienen größte Hochachtung. Sie machen ihren Job, während vor der Tür gegen sie protestiert wird.  </p></span><img src="../../picture/4486146/192/26242903-1.jpg" alt="Eine Wahlhelferin schüttet eine Box mit Wahlbriefen aus" title="Eine Wahlhelferin schüttet eine Box mit Wahlbriefen aus"></img></a></li><li class="sectbody odd treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">7. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726803"></meta><meta itemprop="cms-obj-ID" content="4486789"></meta></div><a href="https://taz.de/Liveticker-zur-US-Wahl/!5726803/" ratioURL-ressource="5726803" class="objlink report article leaded pictured noavatar" role="link"><h4>Liveticker zur US-Wahl</h4><h3>The Winners are Kamala and Joe</h3><p>Joe Biden schlägt Donald Trump und wird der 46. US-Präsident. Kamala Harris wird Vizepräsidentin. Tausende feiern auf den Straßen.  <span class="author">Simone Schmollack, Gereon Asmuth</span></p><img src="../../picture/4486789/192/26249788-3-2-1.jpg" alt="Jor Biden nimmt Coronamaske ab" title="Jor Biden nimmt Coronamaske ab"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">7. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723522"></meta><meta itemprop="cms-obj-ID" content="4486450"></meta></div><a href="https://taz.de/US-Praesidentschaftswahl/!5723522/" ratioURL-ressource="5723522" class="objlink report article leaded pictured noavatar" role="link"><h4>US-Präsidentschaftswahl</h4><h3>Ja? Nein? Vielleicht?</h3><p>Hat Biden gewonnen? Kann Trump noch den Bush-Weg von 2000 gehen? Alles, was man zum US-Wahl-Nachspiel jetzt wissen muss.  </p><img src="../../picture/4486450/192/US-Wahl-1.jpg" alt="Eine Wahlhelferin wertet die Wahlzettel aus" title="Eine Wahlhelferin wertet die Wahlzettel aus"></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723601"></meta><meta itemprop="cms-obj-ID" content="4486389"></meta></div><a href="https://taz.de/Nach-der-Wahl-in-den-USA/!5723601/" ratioURL-ressource="5723601" class="objlink report article leaded pictured noavatar" role="link"><h4>Nach der Wahl in den USA</h4><h3>Wie sich das System Trump zersetzt</h3><p>Noch sind nicht alle Stimmen ausgezählt, da wenden sich schon viele RepublikanerInnen vom Präsidenten ab. Wer jetzt wie reagiert, ist zukunftsweisend.  <span class="author">Barbara Junge</span></p><img src="../../picture/4486389/192/26242015-1.jpg" alt="Nachrichtensendung auf einem Smartphone" title="Nachrichtensendung auf einem Smartphone"></img></a></li><li class="sectbody even treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5723555"></meta><meta itemprop="cms-obj-ID" content="4486424"></meta></div><a href="https://taz.de/Joe-Biden-als-US-Praesident/!5723555/" ratioURL-ressource="5723555" class="objlink report article leaded pictured noavatar" role="link"><h4>Joe Biden als US-Präsident</h4><h3>Kriegen wir hin</h3><p>Bei Amtsantritt wird Joe Biden vor einem Scherbenhaufen stehen. Ohne klare Mehrheiten im Kongress und mit einem Supreme Court, der gegen ihn ist.  <span class="author">Dorothea Hahn</span></p><img src="../../picture/4486424/192/joebiden-1.jpg" alt="Joe Biden mit Mundschutz und Sonnebrille" title="Joe Biden mit Mundschutz und Sonnebrille"></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726648"></meta><meta itemprop="cms-obj-ID" content="4484405"></meta></div><a href="https://taz.de/Trump-Beraterin-Paula-White/!5726648/" ratioURL-ressource="5726648" class="objlink report article leaded pictured noavatar" role="link"><h4>Trump-Beraterin Paula White</h4><h3>Eine unheilige Allianz</h3><p>Mit Ekstase hat eine Trump-Beraterin für Aufsehen gesorgt. Die Evangelikale verkörpert die Zweckehe von Religion und Staat in den USA.  <span class="author">Marina Klimchuk</span></p><img src="../../picture/4484405/192/26243562-1.jpg" alt="Trump und die Pastorint Paula White auf der Bühne" title="Trump und die Pastorint Paula White auf der Bühne"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726686"></meta><meta itemprop="cms-obj-ID" content="4484904"></meta></div><a href="https://taz.de/Anspannung-in-Washington-DC/!5726686/" ratioURL-ressource="5726686" class="objlink report article leaded pictured noavatar" role="link"><h4>Anspannung in Washington, D.C.</h4><h3>Es wird einsam um Trump</h3><p>In der US-Hauptstadt Washington ist die Spannung überall spürbar. Für Republikaner.innen ist jetzt ein Moment der Entscheidung: Für oder gegen Trump?  <span class="author">Barbara Junge</span></p><img src="../../picture/4484904/192/26242075-1.jpg" alt="Donald Trump tritt vom Rednerpult ab" title="Donald Trump tritt vom Rednerpult ab"></img></a></li><li class="sectbody odd treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726692"></meta><meta itemprop="cms-obj-ID" content="4485000"></meta></div><a href="https://taz.de/Thunberg-raecht-sich-an-Trump/!5726692/" ratioURL-ressource="5726692" class="objlink report article leaded pictured noavatar" role="link"><h4>Thunberg rächt sich an Trump</h4><h3>Chill, Donald, chill!</h3><p>Einige Monate verspätet reagiert die Klimaaktivistin Greta Thunberg per Twitter auf US-Präsident Trump. Sie ist dabei nicht besonders freundlich.  </p><img src="../../picture/4485000/192/23816727-1.jpg" alt="Freunde werden sie so schnell nicht: Trump und Thunberg bei der UN im September 2019" title="Freunde werden sie so schnell nicht: Trump und Thunberg bei der UN im September 2019"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726685"></meta><meta itemprop="cms-obj-ID" content="4484872"></meta></div><a href="https://taz.de/US-Wahl-vor-der-Entscheidung/!5726685/" ratioURL-ressource="5726685" class="objlink report article leaded pictured noavatar" role="link"><h4>US-Wahl vor der Entscheidung</h4><h3>Biden schon fast Präsident</h3><p>In Pennsylvania ist Trumps Vorsprung auf unter 24.000 Stimmen gesunken. Die noch fehlenden werden heute gezählt. Sie dürften Biden den Sieg bringen.  <span class="author">Bernd Pickert</span></p><img src="../../picture/4484872/192/USA-Praesidentschaftswahl-Biden-Philadelphia-1.jpg" alt="Demonstrant trägt eine Joe Biden Maske und hält ein Schild hoch." title="Demonstrant trägt eine Joe Biden Maske und hält ein Schild hoch."></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726488"></meta><meta itemprop="cms-obj-ID" content="4484402"></meta></div><a href="https://taz.de/Wahlen-in-den-USA/!5726488/" ratioURL-ressource="5726488" class="objlink report article leaded pictured noavatar" role="link"><h4>Wahlen in den USA</h4><h3>Im Senat blockieren Trumps Leute</h3><p>Nach der Wahl bleibt der Kongress gespalten, die Mehrheit im Senat in republikanischer Hand. Reformen werden deshalb schwierig.  <span class="author">Stefan Schaaf</span></p><img src="../../picture/4484402/192/Blockade_Republikaner_Senat-1.jpg" alt="Das Kongressgebäude im Abendlicht" title="Das Kongressgebäude im Abendlicht"></img></a></li><li class="sectbody even treven online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726260"></meta><meta itemprop="cms-obj-ID" content="4484416"></meta></div><a href="https://taz.de/Latinos-bei-den-US-Wahlen/!5726260/" ratioURL-ressource="5726260" class="objlink report article leaded pictured noavatar" role="link"><h4>Latinos bei den US-Wahlen</h4><h3>Trump statt Sozialismus</h3><p>Der amtierende US-Präsident hat in Florida viele Stimmen bei Latinos geholt. Laut Beobachtern haben sie dabei gegen eigene Interessen gewählt.  <span class="author">Hansjürgen Mai</span></p><img src="../../picture/4484416/192/26231561-1.jpg" alt='Anhängerinnnen und Anhänger von Donald Trump schwenken auf einer Straße jubelnd eine blau-weiß-blaue Fahne mit rotem Dreieck. Im Hintergrund ist eine Fahne mit der Aufschrift "Donald Trump, Keep America Great" zu sehen.' title='Anhängerinnnen und Anhänger von Donald Trump schwenken auf einer Straße jubelnd eine blau-weiß-blaue Fahne mit rotem Dreieck. Im Hintergrund ist eine Fahne mit der Aufschrift "Donald Trump, Keep America Great" zu sehen.'></img></a></li><li class="sectbody odd trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">6. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726684"></meta><meta itemprop="cms-obj-ID" content="4484869"></meta></div><a href="https://taz.de/Liveticker-zur-US-Wahl/!5726684/" ratioURL-ressource="5726684" class="objlink report article leaded pictured noavatar" role="link"><h4>Liveticker zur US-Wahl</h4><h3>„Wir sind keine Feinde“</h3><p>Biden wendet sich in einer Rede an die Nation, sein Sieg rückt immer näher. Trump muss nach einer Niederlage damit rechnen, verklagt zu werden.  <span class="author">Simone Schmollack, Gereon Asmuth</span></p><img src="../../picture/4484869/192/26247769-1.jpg" alt="Joe Bide auf einem Bildschirm" title="Joe Bide auf einem Bildschirm"></img></a></li><li class="sectbody last even trodd online   report article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date">5. 11. 2020</li></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726512"></meta><meta itemprop="cms-obj-ID" content="4484441"></meta></div><a href="https://taz.de/Nach-Abstimmung-in-den-USA/!5726512/" ratioURL-ressource="5726512" class="objlink report article leaded pictured noavatar" role="link"><h4>Nach Abstimmung in den USA</h4><h3>Vom Wahlkampf in den Rechtsstreit</h3><p>Die Republikaner versuchen, einen möglichen Wahlsieg des Demokraten Joe Biden juristisch zu verhindern – und könnten so das Endergebnis verzögern.  <span class="author">Bernd Pickert</span></p><img src="../../picture/4484441/192/Republikaner_juristische_Mittel_Sieg_Joe_Biden_verhindern-1.jpg" alt="zwei Personen stehen vor einer Wand mit Wahlurnen, die mit Nummern beklebt sind" title="zwei Personen stehen vor einer Wand mit Wahlurnen, die mit Nummern beklebt sind"></img></a></li></ul></div></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid497649">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start--><div role="region" id="" class="odd sect sect_description decorated focus directory no_body"><div class="secthead" role="heading"><a class="pictured" name="Schwerpunkt US-Präsidentschaftswahl 2020" href="index.html"><img src="../../picture/3265296/300/26146513.jpg"></img></a><h2><a name="Schwerpunkt US-Präsidentschaftswahl 2020" href="index.html"><span>Schwerpunkt US-Präsidentschaftswahl 2020</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Schwerpunkt US-Präsidentschaftswahl 2020, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><!-- DEBUG wing: 0 extras here, 1 from directory Schwerpunkt US-Präsidentschaftswahl 2020, thats 1 merged-->
+      
+      <div role="region" id="" class="first last odd sect sect_text style_full_image "><div class="secthead" role="heading"><h2><a name="Die USA-Wahlen in Zahlen "><span>Die USA-Wahlen in Zahlen </span></a></h2></div><div class="sectbody"><a class="picture" href="https://taz.de/!5722871/"><img src="../../picture/4459377/624/USA-Praesidentschaftswahl-Trump-Biden-1.png" alt="" title=""></img></a><p>Am 3. November 2020 haben die USA einen neuen Präsidenten gewählt: Der Demokrat Joe Biden, langjähriger Senator und von 2009 bis 2017 Vize unter Barack Obama, hat sich gegen Amtsinhaber Donald Trump durchgesetzt.</p><p>
+              <b xmlns="">
+                <a href="https://taz.de/Die-US-Wahlen-in-Zahlen/!5722871">▶ Alle Grafiken</a>
+              </b>
+            </p></div></div>
+    <div role="region" id="xid833672" class="odd sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded story"><a class="dept" href="../../Panter-Preis/%21p4207/index.html">Panter Preis</a><a href="../../Panter-Preis-Verleihung-2020/%21171944/index.html" ratioURL-ressource="171944" class="objlink leaded pictured leaded story noavatar" role="link"><h4>Panter Preis Verleihung 2020</h4><h3>Livestream</h3><p class="brief">                                 Hier finden Sie den Livestream zur Preisverleihung des taz Panter Preises am 14. November 2020 um 20 Uhr.                                  </p><img src="../../uploads/images/300/Livestream_Video.jpg" alt="" title=""></img></a></li></ul></div><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG tail: 0 extras here, 0 from directory Schwerpunkt US-Präsidentschaftswahl 2020, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="https://taz.de/Schwerpunkt-US-Praesidentschaftswahl-2020/!t5575916"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="../../index.html"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="../../Politik/%21p4615/index.html" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="../../Politik/Deutschland/%21p4616/index.html" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="../../Politik/Europa/%21p4617/index.html" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="../../Politik/Amerika/%21p4618/index.html" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="../../Politik/Afrika/%21p4621/index.html" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="../../Politik/Asien/%21p4619/index.html" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="../../Politik/Nahost/%21p4620/index.html" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="../../Politik/Netzpolitik/%21p4622/index.html" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="../../Oeko/%21p4610/index.html" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="../../Oeko/Oekonomie/%21p4623/index.html" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="../../Oeko/Oekologie/%21p4624/index.html" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="../../Oeko/Arbeit/%21p4629/index.html" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="../../Oeko/Konsum/%21p4625/index.html" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="../../Oeko/Verkehr/%21p4628/index.html" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="../../Oeko/Wissenschaft/%21p4636/index.html" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="../../Oeko/Netzoekonomie/%21p4627/index.html" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="../../Gesellschaft/%21p4611/index.html" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="../../Gesellschaft/Alltag/%21p4632/index.html" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="../../Gesellschaft/Debatte/%21p4633/index.html" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="../../../gazete.taz.de/index.html" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="../../../migration-control.taz.de/index.html#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="../../Gesellschaft/Kolumnen/%21p4634/index.html" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="../../Gesellschaft/Medien/%21p4630/index.html" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="../../Gesellschaft/Bildung/%21p4635/index.html" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="../../Gesellschaft/Gesundheit/%21p4637/index.html" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="../../Gesellschaft/Reise/%21p4638/index.html" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="../../Kultur/%21p4639/index.html" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="../../Kultur/Musik/%21p4640/index.html" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="../../Kultur/Film/%21p4641/index.html" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="../../Kultur/Kuenste/%21p4642/index.html" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="../../Kultur/Buch/%21p4643/index.html" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="../../Kultur/Netzkultur/%21p4631/index.html" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="../../Sport/%21p4646/index.html" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="../../Sport/Fussball/%21p4647/index.html" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="../../Sport/Kolumnen/%21p4648/index.html" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="../../Berlin/%21p4649/index.html" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="../../Nord/%21p4650/index.html" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="../../Nord/Hamburg/%21p4651/index.html" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="../../Nord/Bremen/%21p4652/index.html" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="../../Nord/Kultur/%21p4653/index.html" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="../../Wahrheit/%21p4644/index.html" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="../../bei-Tom/%21t5180734/index.html" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="../../ueber-die-Wahrheit/%21115080/index.html" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="../../%21p4209/index.html#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="../../%21p4271/index.html#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="../../%21p4697/index.html#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="../../../shop.taz.de/index.html#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="../../Info/%21p4206/index.html" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="../../%21p4233/index.html" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="../../Panter-Preis/%21p4207/index.html" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="../../%21p4791/index.html#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="../../%21p5099/index.html" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="../../Anzeigen/%21p4288/index.html" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="../../Podcast/%21p5171/index.html" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="../../Bewegung/%21p4715/index.html" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="../../Kantine/%21p4237/index.html" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="../../../blogs.taz.de/index.html" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="../../%21p5298/index.html" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="../../%21p5297/index.html" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="../../%21p4662/index.html" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="../../Nord/%21p4962/index.html" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="../../Panter-Stiftung/%21p4258/index.html" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="../../Reisen-in-die-Zivilgesellschaft/%21p4310/index.html" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="../../../monde-diplomatique.de/index.html" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="../../Recherchefonds-Ausland/%21p5062/index.html" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="../../Archiv/%21p4311/index.html" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="../../%21p4905/index.html" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="../../%21p5044/index.html" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="../../Hilfe/%21p4591/index.html" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="../../Hilfe/%21p4591/index.html" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="../../%21112354/index.html" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="../../%21p5097/index.html" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="../../%21114802/index.html" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="../../%21114191/index.html" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="../../%21166598/index.html" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="../../%21p4283/index.html" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="../../%21p4858/index.html" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="../../%21112355/index.html" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="https://taz.de/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="../../lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 15:35:04+01:00-->
+<!-- Mirrored from taz.de/Schwerpunkt-US-Praesidentschaftswahl-2020/!t5575916/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Nov 2020 15:04:25 GMT -->
+</html>

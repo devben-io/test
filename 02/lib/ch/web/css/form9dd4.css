@@ -1,0 +1,307 @@
+        /* formular */
+/*
+-webkit-appearance:  safari, chrome
+-moz-appearance:  firefox
+*/
+
+#formchr  {
+	/*font-family: Verdana,Helvetica,sans-serif;*/
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin-left:30px;
+        }
+#formchr p {
+        /*margin-bottom:14.95px;*/
+        margin-bottom:10px;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size:12px;
+	line-height:18px;
+        }
+#formchr p.hinweis {
+	border-top:1px solid #ddd;
+	margin-top:12px;
+	margin-bottom:12px;
+	padding-top:6px;
+        }
+#formchr p.mittig {
+	margin-left:154px;
+        }
+
+#formchr input.right[type="radio"] {
+        background-color: #eee; 
+}
+
+#formchr fieldset {
+        margin-bottom:30px;
+        background:#fff;
+        /*border:1px solid #000;*/
+        border:none;
+        width:582px;
+	padding:0;
+}
+#formchr h3 {
+        color:#333;
+	font-size: 14.95px;
+        font-weight:bold;
+	text-transform:uppercase;
+}
+#formchr legend {
+        color:#333;
+	font-size: 14.95px;
+        font-weight:bold;
+	text-transform:uppercase;
+	padding-top:8px;
+	padding-bottom:0px;
+        border-top:1px solid #ddd;
+        width:582px;
+}
+#formchr br {
+        clear:both;
+}
+#formchr label.checkbox {
+        width:auto;
+	/*font-size:12px;
+	line-height:12px;*/
+}
+
+#formchr label.left {
+        float:left;
+        text-align:right;
+        width:130px;
+        margin-right:24px;
+}
+#formchr input.digiabobem[type=text]{
+        float:left;
+        width:392px;
+	margin-left:154px;
+	background-color:#eee;
+}
+#formchr input[type=text]{
+        float:left;
+        width:250px;
+	border:1px solid #ddd;
+	background-color:#eee;
+}
+#formchr input.zaehler[type=text]{
+        float:left;
+        width:40px;
+	margin-left:154px;
+	border:none;
+	background-color:#fff;
+}
+#formchr input[type=email]{
+        float:left;
+        width:250px;
+}
+#formchr input[type=tel]{
+        float:left;
+        width:250px;
+}
+#formchr select{
+        float:left;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size:12px;
+	margin-left:154px;
+	background-color:#eee;
+        width:256px;
+	-webkit-appearance: menulist; /* pfeile im safari */
+	-moz-appearance: menulist; /* pfeile im chrome */
+       /* width:422px;*/
+
+}
+#formchr select.dateiformatwahl{
+        float:left;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size:12px;
+	margin-left:0px;
+	background-color:#eee;
+       /* width:246px;*/
+        width:456px;
+}
+#formchr select.lieferhinweis{
+        float:left;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size:12px;
+	margin-left:0px;
+	margin-bottom:4px;
+}
+#formchr select.auto{
+        float:left;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size:12px;
+	margin-left:0px;
+	margin-right:3px;
+	margin-bottom:4px;
+	width:auto;
+}
+#formchr input.right {
+        float:left;
+        width:auto;
+        margin-right: 12px;
+}
+#formchr input.right[type=radio] {
+        padding:0;
+        background-color:#eee;
+	border:1px solid #ddd;
+	/*margin-left:154px;*/
+	margin-left:154px;
+}
+#formchr input.right[type=checkbox] {
+        width:auto;
+        background-color:#eee;
+	border:1px solid #ddd;
+	margin-left:154px;
+	margin-top:4px;
+}
+#formchr input[type=checkbox]
+{
+  /* sized Checkboxes */
+ -ms-transform: scale(1.3); /* IE */
+  -moz-transform: scale(1.3); /* FF */
+  -webkit-transform: scale(1.3); /* Safari and Chrome */
+  -o-transform: scale(1.3); /* Opera */
+
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+	box-sizing: border-box;
+}
+#formchr input[type=radio] {
+	-webkit-appearance: radio;
+	-moz-appearance: radio;
+}
+#formchr input[type=submit] {
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+	font-size: 14px;
+        text-transform: uppercase;
+	clear:all;
+        margin-top:12px;
+	margin-bottom:12px;
+        padding-bottom:0px;
+        width:250px;
+	background-color: #333;
+	color: #fff;
+}
+#formchr input.fliessend[type=radio] {
+        float:left;
+        padding:0;
+        width:auto;
+        background-color:#eee;
+}
+#formchr input.fliessend[type=checkbox] {
+        float:left;
+        padding:0;
+        width:auto;
+        background-color:#eee;
+}
+#formchr label.fliessend {
+        float:left;
+        margin-left:0.2em;
+        margin-right:1.5em;
+        margin-bottom:1.5em;
+        padding:0;
+        width:auto;
+}
+#formchr label, select, input[type=checkbox],
+input[type=radio],
+input[type=submit] {
+        cursor:pointer;
+}
+#formchr label.radio {
+        margin-left:24px;
+	display:block;
+	width:auto;
+}
+#formchr textarea {
+        color:#000;
+        background:#eee;
+        width:250px;
+	margin-left:154px;
+}
+#formchr textarea.links {
+        color:#000;
+        background:#eee;
+        width:400px;
+	margin-left:0;
+}
+#formchr input, #formchr reset {
+        color:#333;
+        background:#eee;
+        width:220px;
+        margin-bottom: 4px;
+}
+#formchr input:focus, textarea:focus {
+        color:#333;
+        background-color:#fff;
+}
+#formchr input[type=submit], #formchr input[type=reset]  {
+        /*padding:0.5em;*/
+        /*margin:0.5em;*/
+        }
+.dklrot {
+        color:#c62039;
+        font-weight:bold;
+}
+.rotweiss {
+        color:#fff;
+        font-weight:bold;
+        background-color:#c62039;
+        padding-left:2px;
+        padding-right:2px;
+}
+p.radioe{
+        margin:-0.5em 0.8em 0 2.4em;
+        }
+label.radioe{
+        margin:0 0 0 0.4em;
+        float:left;
+        width:auto;
+        }
+input[type=radio].radioe{
+        margin:0 0.2em 0 2.4em;
+        float:left;
+        width:auto;
+}
+#formchr input.countdown {width:50px; margin-right:10px;}
+#formchr input.w-45 {width:45px;}
+#formchr input.w-100 {width:100px;}
+#formchr input.w-220 {width:220px;}
+#formchr input.mb-16 {margin-bottom:16px;}
+.ml130-db {margin-left:130px; display:block;}
+
+/* action-teaser */
+.action-teaser >.corpus >form { 
+padding-top: 168px;
+border-top: none;
+}
+.corpus >form       >input[type=submit],
+.corpus >form >span >input[type=text]{
+        width:135px;
+        margin:0px 0px 0px 8px;
+        border:1px solid #999;
+        text-transform: uppercase;
+        display: inline-block;
+}
+.corpus >form >input[type=submit] {
+        background-color: #222;
+        color: #fff;
+        border-color: #222;
+        padding: 1px;
+        font-size: 15px;
+        line-height: 15px;
+        font-family: taz_sbold;
+        }
+.corpus >form >span >input[type=text]{
+        padding: 2px;
+        font-size: 13px;
+        line-height: 13px;
+}
+p.error  {
+	border:2px solid #c62039;
+	font-family: DejaVu Sans,Bitstream Vera Sans,Verdana,Helvetica,sans-serif;
+        font-size: 12px;
+	font-weight:bold;
+	padding:8px;
+	margin-bottom:12px;
+	margin-left:30px;
+}
